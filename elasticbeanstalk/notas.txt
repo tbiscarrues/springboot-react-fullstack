@@ -1,0 +1,10 @@
+--https://docs.docker.com/cloud/ecs-integration/
+--https://docs.docker.com/docker-hub/access-tokens/
+
+--docker swarm init 
+docker swarm init 
+
+--create a secret from this file using docker secret
+docker secret create token-springboot-react-fullstack token.json
+
+x-aws-pull_credentials: "arn:aws:secretsmanager:eu-west-3:n2qt1iofq3uagq7e3jnflmql9:secret:token-springboot-react-fullstack"

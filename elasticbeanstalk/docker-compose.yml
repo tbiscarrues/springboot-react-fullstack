@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+    backend:
+        image: "amurillo01/springboot-react-fullstack:latest"
+        ports:
+        - "80:8080"
+        x-aws-pull_credentials: "arn:aws:secretsmanager:eu-west-3:n2qt1iofq3uagq7e3jnflmql9:secret:token-springboot-react-fullstack"
+        restart: "always"
